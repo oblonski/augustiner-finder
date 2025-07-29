@@ -34,6 +34,7 @@ const AugustinerFinder = () => {
     const [editingFriend, setEditingFriend] = useState<number | null>(null);
     const [tempAddress, setTempAddress] = useState('');
     const [locationOverrides, setLocationOverrides] = useState<{[key: number]: {address: string, lat: number, lng: number}}>({});
+    const [expandedPlayers, setExpandedPlayers] = useState<{[key: number]: boolean}>({});
 
     // Get friends with location overrides applied
     const getFriendsWithOverrides = () => {
@@ -107,6 +108,13 @@ const AugustinerFinder = () => {
         });
         // Clear results so user needs to recalculate
         setCalculatedResults([]);
+    };
+
+    const toggleExpandPlayers = (locationId: number) => {
+        setExpandedPlayers(prev => ({
+            ...prev,
+            [locationId]: !prev[locationId]
+        }));
     };
 
     // Haversine distance fallback
@@ -598,7 +606,7 @@ const AugustinerFinder = () => {
                                             <div className="border-t pt-2">
                                                 <div className="text-xs text-gray-700 font-medium mb-1">Players:</div>
                                                 <div className="flex flex-wrap gap-1">
-                                                    {result.playerDistances.slice(0, 3).map(pd => (
+                                                    {(expandedPlayers[result.location.id] ? result.playerDistances : result.playerDistances.slice(0, 3)).map(pd => (
                                                         <span
                                                             key={pd.player}
                                                             className="bg-gray-800 text-white px-1.5 py-0.5 rounded text-xs font-medium"
@@ -607,9 +615,18 @@ const AugustinerFinder = () => {
                             </span>
                                                     ))}
                                                     {result.playerDistances.length > 3 && (
-                                                        <span className="text-xs text-gray-600 font-medium">
-                              +{result.playerDistances.length - 3} more
-                            </span>
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                toggleExpandPlayers(result.location.id);
+                                                            }}
+                                                            className="text-xs text-amber-600 hover:text-amber-700 font-medium underline cursor-pointer"
+                                                        >
+                                                            {expandedPlayers[result.location.id] 
+                                                                ? 'Show less' 
+                                                                : `+${result.playerDistances.length - 3} more`
+                                                            }
+                                                        </button>
                                                     )}
                                                 </div>
                                             </div>

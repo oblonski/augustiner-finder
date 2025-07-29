@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { MapPin, Users, Clock, Navigation, Star, Edit2, Check, X } from 'lucide-react';
 import { augustinerLocations } from '@/data/augustinerLocations';
 import { friends as staticFriends } from '@/data/friends';
+import CookieConsent from './CookieConsent';
 
 // Dynamically import Map component to avoid SSR issues
 const Map = dynamic(() => import('./Map'), {
@@ -638,11 +639,48 @@ const AugustinerFinder = () => {
                     </div>
                 </div>
 
-                {/* Info Footer */}
-                <div className="mt-8 text-center text-sm text-amber-700">
-                    <p>🍺 Prost! Using live data from OpenStreetMap and GraphHopper APIs.</p>
-                </div>
+                {/* Footer */}
+                <footer className="mt-12 border-t border-amber-200 pt-8">
+                    <div className="grid md:grid-cols-3 gap-8 mb-6">
+                        <div>
+                            <h3 className="text-lg font-semibold text-amber-800 mb-3">🍺 Augustiner Finder</h3>
+                            <p className="text-sm text-amber-700">
+                                Find the perfect Augustiner location for your Schafkopf round in Munich.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="font-medium text-amber-800 mb-3">Rechtliches</h4>
+                            <ul className="space-y-2 text-sm">
+                                <li>
+                                    <a href="/impressum" className="text-amber-700 hover:text-amber-800 underline">
+                                        Impressum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/datenschutz" className="text-amber-700 hover:text-amber-800 underline">
+                                        Datenschutzerklärung
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-medium text-amber-800 mb-3">Verwendete APIs</h4>
+                            <ul className="space-y-1 text-sm text-amber-700">
+                                <li>• OpenStreetMap</li>
+                                <li>• GraphHopper Routing</li>
+                                <li>• CARTO Maps</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div className="text-center text-sm text-amber-600 border-t border-amber-200 pt-4">
+                        <p>🍺 Prost! Ein privates Projekt für Münchner Schafkopf-Runden.</p>
+                    </div>
+                </footer>
             </div>
+            
+            {/* Cookie Consent Popup */}
+            <CookieConsent />
         </div>
     );
 };

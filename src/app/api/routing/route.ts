@@ -5,14 +5,16 @@ export async function POST(request: NextRequest) {
         const { points, vehicle = 'foot' } = await request.json();
 
         // GraphHopper Routing API
-        const response = await fetch('https://graphhopper.com/api/1/route', {
+        const url = new URL('https://graphhopper.com/api/1/route');
+        url.searchParams.append('key', process.env.GRAPHHOPPER_API_KEY || '');
+        
+        const response = await fetch(url.toString(), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 points,
                 vehicle,
-                locale: 'de',
-                key: process.env.GRAPHHOPPER_API_KEY
+                locale: 'de'
             })
         });
 

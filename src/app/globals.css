@@ -24,3 +24,65 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Leaflet map container styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Force attribution to be visible */
+.leaflet-container .leaflet-control-attribution {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1000 !important;
+}
+
+/* Ensure Leaflet tiles are visible */
+.leaflet-tile-pane {
+  opacity: 1 !important;
+}
+
+.leaflet-tile {
+  visibility: visible !important;
+}
+
+/* Fix for Leaflet controls */
+.leaflet-control-container {
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Ensure map panes are properly layered */
+.leaflet-pane {
+  position: absolute;
+  z-index: 400;
+}
+
+.leaflet-tile-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure attribution is visible and properly styled */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #333 !important;
+  padding: 2px 5px !important;
+  font-size: 11px !important;
+  border-radius: 3px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #0078A8 !important;
+  text-decoration: none !important;
+}
+
+.leaflet-control-attribution a:hover {
+  text-decoration: underline !important;
+}

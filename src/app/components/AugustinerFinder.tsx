@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { MapPin, Users, Clock, Navigation, Star, Edit2, Check, X } from 'lucide-react';
 import { augustinerLocations } from '@/data/augustinerLocations';
 import { friends as staticFriends } from '@/data/friends';
-import CookieConsent from './CookieConsent';
 
 // Dynamically import Map component to avoid SSR issues
 const Map = dynamic(() => import('./Map'), {
@@ -678,9 +677,6 @@ const AugustinerFinder = () => {
                     </div>
                 </footer>
             </div>
-            
-            {/* Cookie Consent Popup */}
-            <CookieConsent />
         </div>
     );
 };

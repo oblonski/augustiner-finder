@@ -96,31 +96,50 @@ export default function Datenschutz() {
 
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
                             <Cookie className="w-6 h-6 text-amber-600 mr-2" />
-                            Cookies und lokale Speicherung
+                            Keine Cookies - Nur lokale Speicherung
                         </h2>
                         <p className="mb-4 text-gray-700">
-                            Diese Website verwendet keine Tracking-Cookies. Wir verwenden ausschließlich:
+                            <strong>Diese Website verwendet KEINE Cookies.</strong> Wir nutzen ausschließlich die lokale Speicherung 
+                            Ihres Browsers (localStorage) für die technisch notwendigen Funktionen der Anwendung:
                         </p>
                         <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-1">
                             <li><strong>Technisch notwendige Speicherung:</strong> LocalStorage für Ihre App-Einstellungen</li>
-                            <li><strong>Cookie-Consent:</strong> Ihre Einwilligung wird lokal gespeichert</li>
+                            <li><strong>Keine Einwilligung erforderlich:</strong> Da wir keine Cookies verwenden und nur technisch notwendige Speicherung nutzen</li>
+                            <li><strong>Keine Weitergabe:</strong> Alle Daten bleiben in Ihrem Browser</li>
                         </ul>
+
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">SSL-Verschlüsselung</h2>
+                        <p className="mb-6 text-gray-700">
+                            Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung eine SSL-Verschlüsselung. 
+                            Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" 
+                            auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                        </p>
 
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ihre Rechte</h2>
                         <p className="mb-4 text-gray-700">
-                            Da wir keine personenbezogenen Daten zentral speichern, haben Sie folgende Möglichkeiten:
+                            Da wir keine personenbezogenen Daten zentral speichern und keine Cookies verwenden, haben Sie folgende Möglichkeiten:
                         </p>
                         <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-1">
-                            <li><strong>Löschung:</strong> Löschen Sie die Browser-Daten für diese Website</li>
-                            <li><strong>Widerruf:</strong> Widerrufen Sie Ihre Cookie-Einwilligung in den Einstellungen</li>
-                            <li><strong>Einschränkung:</strong> Nutzen Sie nur notwendige Cookies</li>
+                            <li><strong>Löschung:</strong> Löschen Sie die Browser-Daten (localStorage) für diese Website über Ihre Browser-Einstellungen</li>
+                            <li><strong>Einsicht:</strong> Alle gespeicherten Daten können Sie in den Browser-Entwicklertools einsehen</li>
+                            <li><strong>Kontrolle:</strong> Sie haben jederzeit volle Kontrolle über alle lokal gespeicherten Daten</li>
                         </ul>
 
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Hosting</h2>
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Hosting und Server-Logs</h2>
+                        <p className="mb-4 text-gray-700">
+                            Diese Website wird auf Vercel gehostet. Der Hosting-Anbieter erhebt in sog. Server-Log-Dateien 
+                            folgende Daten, die Ihr Browser automatisch übermittelt:
+                        </p>
+                        <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                            <li>Browser-Typ und Browser-Version</li>
+                            <li>Verwendetes Betriebssystem</li>
+                            <li>Referrer URL (die zuvor besuchte Seite)</li>
+                            <li>Hostname des zugreifenden Rechners (IP-Adresse)</li>
+                            <li>Uhrzeit der Serveranfrage</li>
+                        </ul>
                         <p className="mb-6 text-gray-700">
-                            Diese Website wird auf Vercel gehostet. Dabei können Server-Logs mit Ihrer IP-Adresse, 
-                            dem Zeitpunkt des Zugriffs und der aufgerufenen Seite erstellt werden. Diese Daten 
-                            werden ausschließlich für technische Zwecke verwendet.
+                            Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit 
+                            anderen Datenquellen wird nicht vorgenommen. Die Daten werden nach einer statistischen Auswertung gelöscht.
                         </p>
 
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Änderungen der Datenschutzerklärung</h2>
@@ -129,10 +148,23 @@ export default function Datenschutz() {
                             geänderte Rechtslage oder Änderungen des Dienstes sowie der Datenverarbeitung anzupassen.
                         </p>
 
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Rechtsgrundlage</h2>
+                        <p className="mb-6 text-gray-700">
+                            Die Datenverarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an der 
+                            Bereitstellung und Optimierung unseres Onlineangebotes gemäß Art. 6 Abs. 1 lit. f DSGVO.
+                        </p>
+
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Kinder</h2>
+                        <p className="mb-6 text-gray-700">
+                            Unser Angebot richtet sich grundsätzlich an Erwachsene. Personen unter 16 Jahren sollten 
+                            ohne Zustimmung der Erziehungsberechtigten keine personenbezogenen Daten an uns übermitteln.
+                        </p>
+
                         <div className="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-200">
                             <p className="text-sm text-amber-800">
                                 <strong>Stand:</strong> Januar 2025<br />
-                                <strong>Kontakt:</strong> Bei Fragen zum Datenschutz kontaktieren Sie uns über GitHub.
+                                <strong>Kontakt:</strong> Bei Fragen zum Datenschutz kontaktieren Sie uns über GitHub.<br />
+                                <strong>Hinweis:</strong> Diese Datenschutzerklärung gilt ausschließlich für diese Website.
                             </p>
                         </div>
                     </div>

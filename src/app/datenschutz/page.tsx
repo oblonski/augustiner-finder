@@ -111,8 +111,8 @@ export default function Datenschutz() {
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">SSL-Verschlüsselung</h2>
                         <p className="mb-6 text-gray-700">
                             Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung eine SSL-Verschlüsselung. 
-                            Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" 
-                            auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                            Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von http://
+                            auf https:// wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
                         </p>
 
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ihre Rechte</h2>

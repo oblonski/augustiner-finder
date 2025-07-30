@@ -263,7 +263,7 @@ const AugustinerFinder = () => {
                 {/* Header */}
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold text-amber-800 mb-2">
-                        🍺 Augustiner Schafkopf Finder
+                        🍺 Schafkopf Location Finder
                     </h1>
                     <p className="text-lg text-amber-700">
                         Find the perfect Augustiner location for your Schafkopf round in Munich

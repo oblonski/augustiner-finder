@@ -642,9 +642,9 @@ const AugustinerFinder = () => {
                 <footer className="mt-12 border-t border-amber-200 pt-8">
                     <div className="grid md:grid-cols-3 gap-8 mb-6">
                         <div>
-                            <h3 className="text-lg font-semibold text-amber-800 mb-3">🍺 Augustiner Finder</h3>
+                            <h3 className="text-lg font-semibold text-amber-800 mb-3">🍺 Schafkopf Location Finder</h3>
                             <p className="text-sm text-amber-700">
-                                Find the perfect Augustiner location for your Schafkopf round in Munich.
+                                Find the perfect location for your Schafkopf round in Munich.
                             </p>
                         </div>
                         <div>
